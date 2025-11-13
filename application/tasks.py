@@ -55,6 +55,6 @@ def daily_report():
     users = User.query.all()
     for user in users[1:]:
         text = f"Hi {user.username}, did you visit the app today? Check out your latest quizzes and do not forget to take part in the quizzes!"
-        response = requests.post("https://chat.googleapis.com/v1/spaces/AAQAUQAQQFE/messages?key=AIzaSyDdI0hCZtE6vySjMm-WEfRq3CPzqKqqsHI&token=JdfOmqczr0GCwkoihs8wpOVQvCUbguqPX-dK-WEx3cg", json = {"text": text})
+        response = requests.post("your google api link here", json = {"text": text})
         print(response.status_code)
     return "Daily report notification sent"
